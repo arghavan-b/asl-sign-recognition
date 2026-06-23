@@ -1,0 +1,70 @@
+# ─────────────────────────────────────────────────────────────
+# ASL sign recognition — Phase 1 config
+# ─────────────────────────────────────────────────────────────
+
+seed: 42
+
+data:
+  landmark_dir: data/landmarks
+  splits_dir: data/splits
+  cache_in_ram: true      # preload normalized+selected features into RAM (skips
+                          # 94k file reads/epoch). Forces num_workers=0. With
+                          # use_face=false this is a few GB; with face it's ~24GB.
+  max_frames: 64          # clips are padded/truncated to this length
+  min_frames: 8           # drop clips shorter than this after trimming
+  val_fraction: 0.15      # random train/val split; used only if no signer-disjoint
+                          # split files exist. Remainder all goes to train.
+
+landmarks:
+  use_pose: true
+  use_face: false         # 225-d (hands+pose). face = 1404/1629 noise dims that
+                          # were diluting the signal and slowing convergence.
+  use_left_hand: true
+  use_right_hand: true
+  normalize: true         # center on pose mid-hip / shoulder width
+
+# Landmark-space augmentation (train split only). Attacks the train/val gap.
+# Tuned MODERATE: enough to stop overfitting, not so much it underfits. If
+# train_loss sits well above val_loss and val_acc stalls, soften further.
+augment:
+  enabled: true
+  temporal_speed: [0.8, 1.3]   # random resample speed
+  rotate_deg: 10               # x-y rotation range (±)
+  scale: 0.10                  # isotropic scale jitter (±)
+  shift: 0.03                  # global translation (±)
+  jitter_std: 0.008            # per-landmark gaussian noise
+  mirror_prob: 0.5             # left/right flip + hand swap (covers lefties)
+  point_dropout: 0.05          # fraction of points zeroed (occlusion sim)
+  frame_dropout: 0.05          # fraction of frames dropped
+  hand_dropout_prob: 0.1       # chance to drop one whole hand for the clip
+
+model:
+  # gru | lstm | transformer.
+  # Default is GRU: at small data scale a stacked GRU beat both LSTM and
+  # Transformer in the SignSpeak benchmark (arXiv:2407.12020). Switch to
+  # transformer once you have substantially more data (it scales better).
+  type: gru
+  hidden_dim: 256
+  num_layers: 2           # gru/lstm; use ~4 for transformer
+  num_heads: 8            # transformer only
+  dropout: 0.3            # let augmentation do the regularizing, not 3 mechanisms
+  bidirectional: true     # gru/lstm only
+
+train:
+  epochs: 80
+  batch_size: 64
+  accum_steps: 1            # gradient accumulation; effective batch = batch*accum.
+                            # >1 = smoother grads, NOT faster. Try 2 (eff. 128).
+  lr: 0.001                 # raised from 3e-4 for faster convergence (+ warmup)
+  weight_decay: 0.0001
+  warmup_epochs: 5          # now wired: linear warmup then cosine
+  grad_clip: 1.0
+  num_workers: 4
+  label_smoothing: 0.1    # softens targets; helps calibration + overfitting
+  device: auto            # auto | cpu | cuda | mps
+  checkpoint_dir: checkpoints
+  early_stop_patience: 12
+
+infer:
+  confidence_threshold: 0.8   # below this, flag for clarification / interpreter
+  top_k: 3                    # candidates surfaced when gated

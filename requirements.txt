@@ -1,0 +1,18 @@
+# Core
+torch>=2.2
+numpy>=1.24
+mediapipe>=0.10.9
+opencv-python>=4.9
+
+# Config / utils
+pyyaml>=6.0
+tqdm>=4.66
+scikit-learn>=1.3
+
+# Data prep
+yt-dlp>=2024.1.1     # scripts/fetch_wlasl.py — pulling WLASL clips
+pandas>=2.0         # scripts/adapt_google_islr.py — reading parquet landmarks
+pyarrow>=14.0       # parquet backend for pandas
+
+# Dev
+pytest>=8.0

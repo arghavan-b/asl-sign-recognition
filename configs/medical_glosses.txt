@@ -1,0 +1,30 @@
+# PAUSED — deferred to a later phase. The MVP domain is everyday conversation
+# (see configs/daily_glosses.txt). Kept here for when the medical pilot resumes.
+#
+# Starter ER/intake medical vocabulary (replace/expand from Phase 0 interviews).
+# One gloss per line; folder names under data/raw/ must match these.
+PAIN
+HURT
+NAUSEA
+DIZZY
+FEVER
+HEADACHE
+CHEST
+BREATHE
+HEART
+STOMACH
+VOMIT
+BLEED
+MEDICINE
+ALLERGY
+PREGNANT
+DIABETES
+BLOOD-PRESSURE
+HELP
+EMERGENCY
+YES
+NO
+WHERE
+WHEN
+HOW-MUCH
+HOW-LONG

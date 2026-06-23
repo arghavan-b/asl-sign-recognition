@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Data & artifacts (never commit raw clips — see README licensing/ethics)
+data/raw/
+data/landmarks/
+checkpoints/
+runs/
+*.pt
+*.npy
+*.parquet
+*.mp4
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

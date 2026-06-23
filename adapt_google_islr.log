@@ -1,0 +1,630 @@
+Dataset signs: 250 | converting: 250
+Vocab signs not in this dataset (0): none
+  TV                385 samples
+  after             347 samples
+  airplane          393 samples
+  all               386 samples
+  alligator         390 samples
+  animal            348 samples
+  another           370 samples
+  any               355 samples
+  apple             377 samples
+  arm               362 samples
+  aunt              391 samples
+  awake             401 samples
+  backyard          372 samples
+  bad               376 samples
+  balloon           393 samples
+  bath              351 samples
+  because           395 samples
+  bed               353 samples
+  bedroom           388 samples
+  bee               395 samples
+  before            354 samples
+  beside            310 samples
+  better            376 samples
+  bird              404 samples
+  black             388 samples
+  blow              391 samples
+  blue              362 samples
+  boat              370 samples
+  book              368 samples
+  boy               382 samples
+  brother           395 samples
+  brown             403 samples
+  bug               387 samples
+  bye               402 samples
+  callonphone       385 samples
+  can               366 samples
+  car               353 samples
+  carrot            386 samples
+  cat               400 samples
+  cereal            379 samples
+  chair             368 samples
+  cheek             375 samples
+  child             348 samples
+  chin              346 samples
+  chocolate         386 samples
+  clean             355 samples
+  close             374 samples
+  closet            393 samples
+  cloud             378 samples
+  clown             388 samples
+  cow               404 samples
+  cowboy            378 samples
+  cry               390 samples
+  cut               369 samples
+  cute              382 samples
+  dad               378 samples
+  dance             312 samples
+  dirty             365 samples
+  dog               380 samples
+  doll              400 samples
+  donkey            410 samples
+  down              327 samples
+  drawer            373 samples
+  drink             400 samples
+  drop              356 samples
+  dry               391 samples
+  dryer             369 samples
+  duck              405 samples
+  ear               389 samples
+  elephant          382 samples
+  empty             372 samples
+  every             368 samples
+  eye               395 samples
+  face              370 samples
+  fall              382 samples
+  farm              397 samples
+  fast              362 samples
+  feet              372 samples
+  find              397 samples
+  fine              360 samples
+  finger            379 samples
+  finish            388 samples
+  fireman           402 samples
+  first             398 samples
+  fish              380 samples
+  flag              386 samples
+  flower            396 samples
+  food              392 samples
+  for               384 samples
+  frenchfries       384 samples
+  frog              396 samples
+  garbage           371 samples
+  gift              393 samples
+  giraffe           382 samples
+  girl              378 samples
+  give              346 samples
+  glasswindow       390 samples
+  go                388 samples
+  goose             394 samples
+  grandma           382 samples
+  grandpa           387 samples
+  grass             386 samples
+  green             382 samples
+  gum               390 samples
+  hair              385 samples
+  happy             379 samples
+  hat               342 samples
+  hate              358 samples
+  have              337 samples
+  haveto            348 samples
+  head              386 samples
+  hear              405 samples
+  helicopter        379 samples
+  hello             390 samples
+  hen               377 samples
+  hesheit           357 samples
+  hide              363 samples
+  high              375 samples
+  home              395 samples
+  horse             391 samples
+  hot               383 samples
+  hungry            385 samples
+  icecream          398 samples
+  if                366 samples
+  into              364 samples
+  jacket            336 samples
+  jeans             382 samples
+  jump              383 samples
+  kiss              396 samples
+  kitty             389 samples
+  lamp              370 samples
+  later             377 samples
+  like              376 samples
+  lion              392 samples
+  lips              402 samples
+  listen            415 samples
+  look              414 samples
+  loud              389 samples
+  mad               392 samples
+  make              398 samples
+  man               392 samples
+  many              377 samples
+  milk              377 samples
+  minemy            376 samples
+  mitten            377 samples
+  mom               395 samples
+  moon              380 samples
+  morning           372 samples
+  mouse             408 samples
+  mouth             391 samples
+  nap               391 samples
+  napkin            398 samples
+  night             336 samples
+  no                370 samples
+  noisy             361 samples
+  nose              382 samples
+  not               377 samples
+  now               369 samples
+  nuts              402 samples
+  old               389 samples
+  on                368 samples
+  open              354 samples
+  orange            390 samples
+  outside           386 samples
+  owie              365 samples
+  owl               396 samples
+  pajamas           389 samples
+  pen               399 samples
+  pencil            392 samples
+  penny             390 samples
+  person            312 samples
+  pig               368 samples
+  pizza             396 samples
+  please            384 samples
+  police            388 samples
+  pool              363 samples
+  potty             351 samples
+  pretend           404 samples
+  pretty            392 samples
+  puppy             357 samples
+  puzzle            342 samples
+  quiet             358 samples
+  radio             387 samples
+  rain              381 samples
+  read              362 samples
+  red               379 samples
+  refrigerator      363 samples
+  ride              347 samples
+  room              372 samples
+  sad               391 samples
+  same              380 samples
+  say               377 samples
+  scissors          369 samples
+  see               388 samples
+  shhh              411 samples
+  shirt             352 samples
+  shoe              364 samples
+  shower            372 samples
+  sick              380 samples
+  sleep             380 samples
+  sleepy            403 samples
+  smile             376 samples
+  snack             381 samples
+  snow              386 samples
+  stairs            382 samples
+  stay              376 samples
+  sticky            349 samples
+  store             374 samples
+  story             369 samples
+  stuck             346 samples
+  sun               389 samples
+  table             337 samples
+  talk              394 samples
+  taste             392 samples
+  thankyou          357 samples
+  that              381 samples
+  there             363 samples
+  think             399 samples
+  thirsty           360 samples
+  tiger             394 samples
+  time              363 samples
+  tomorrow          388 samples
+  tongue            374 samples
+  tooth             393 samples
+  toothbrush        402 samples
+  touch             372 samples
+  toy               378 samples
+  tree              382 samples
+  uncle             405 samples
+  underwear         373 samples
+  up                394 samples
+  vacuum            307 samples
+  wait              346 samples
+  wake              401 samples
+  water             384 samples
+  wet               382 samples
+  weus              371 samples
+  where             372 samples
+  white             370 samples
+  who               403 samples
+  why               364 samples
+  will              369 samples
+  wolf              388 samples
+  yellow            384 samples
+  yes               386 samples
+  yesterday         398 samples
+  yourself          385 samples
+  yucky             379 samples
+  zebra             375 samples
+  zipper            299 samples
+Total samples to convert: 94477
+  …750 written
+  …1000 written
+  …1250 written
+  …1500 written
+  …1750 written
+  …2000 written
+  …2250 written
+  …2500 written
+  …2750 written
+  …3000 written
+  …3250 written
+  …3500 written
+  …3750 written
+  …4000 written
+  …4250 written
+  …4500 written
+  …4750 written
+  …5000 written
+  …5250 written
+  …5500 written
+  …5750 written
+  …6000 written
+  …6250 written
+  …6500 written
+  …6750 written
+  …7000 written
+  …7250 written
+  …7500 written
+  …7750 written
+  …8000 written
+  …8250 written
+  …8500 written
+  …8750 written
+  …9000 written
+  …9250 written
+  …9500 written
+  …9750 written
+  …10000 written
+  …10250 written
+  …10500 written
+  …10750 written
+  …11000 written
+  …11250 written
+  …11500 written
+  …11750 written
+  …12000 written
+  …12250 written
+  …12500 written
+  …12750 written
+  …13000 written
+  …13250 written
+  …13500 written
+  …13750 written
+  …14000 written
+  …14250 written
+  …14500 written
+  …14750 written
+  …15000 written
+  …15250 written
+  …15500 written
+  …15750 written
+  …16000 written
+  …16250 written
+  …16500 written
+  …16750 written
+  …17000 written
+  …17250 written
+  …17500 written
+  …17750 written
+  …18000 written
+  …18250 written
+  …18500 written
+  …18750 written
+  …19000 written
+  …19250 written
+  …19500 written
+  …19750 written
+  …20000 written
+  …20250 written
+  …20500 written
+  …20750 written
+  …21000 written
+  …21250 written
+  …21500 written
+  …21750 written
+  …22000 written
+  …22250 written
+  …22500 written
+  …22750 written
+  …23000 written
+  …23250 written
+  …23500 written
+  …23750 written
+  …24000 written
+  …24250 written
+  …24500 written
+  …24750 written
+  …25000 written
+  …25250 written
+  …25500 written
+  …25750 written
+  …26000 written
+  …26250 written
+  …26500 written
+  …26750 written
+  …27000 written
+  …27250 written
+  …27500 written
+  …27750 written
+  …28000 written
+  …28250 written
+  …28500 written
+  …28750 written
+  …29000 written
+  …29250 written
+  …29500 written
+  …29750 written
+  …30000 written
+  …30250 written
+  …30500 written
+  …30750 written
+  …31000 written
+  …31250 written
+  …31500 written
+  …31750 written
+  …32000 written
+  …32250 written
+  …32500 written
+  …32750 written
+  …33000 written
+  …33250 written
+  …33500 written
+  …33750 written
+  …34000 written
+  …34250 written
+  …34500 written
+  …34750 written
+  …35000 written
+  …35250 written
+  …35500 written
+  …35750 written
+  …36000 written
+  …36250 written
+  …36500 written
+  …36750 written
+  …37000 written
+  …37250 written
+  …37500 written
+  …37750 written
+  …38000 written
+  …38250 written
+  …38500 written
+  …38750 written
+  …39000 written
+  …39250 written
+  …39500 written
+  …39750 written
+  …40000 written
+  …40250 written
+  …40500 written
+  …40750 written
+  …41000 written
+  …41250 written
+  …41500 written
+  …41750 written
+  …42000 written
+  …42250 written
+  …42500 written
+  …42750 written
+  …43000 written
+  …43250 written
+  …43500 written
+  …43750 written
+  …44000 written
+  …44250 written
+  …44500 written
+  …44750 written
+  …45000 written
+  …45250 written
+  …45500 written
+  …45750 written
+  …46000 written
+  …46250 written
+  …46500 written
+  …46750 written
+  …47000 written
+  …47250 written
+  …47500 written
+  …47750 written
+  …48000 written
+  …48250 written
+  …48500 written
+  …48750 written
+  …49000 written
+  …49250 written
+  …49500 written
+  …49750 written
+  …50000 written
+  …50250 written
+  …50500 written
+  …50750 written
+  …51000 written
+  …51250 written
+  …51500 written
+  …51750 written
+  …52000 written
+  …52250 written
+  …52500 written
+  …52750 written
+  …53000 written
+  …53250 written
+  …53500 written
+  …53750 written
+  …54000 written
+  …54250 written
+  …54500 written
+  …54750 written
+  …55000 written
+  …55250 written
+  …55500 written
+  …55750 written
+  …56000 written
+  …56250 written
+  …56500 written
+  …56750 written
+  …57000 written
+  …57250 written
+  …57500 written
+  …57750 written
+  …58000 written
+  …58250 written
+  …58500 written
+  …58750 written
+  …59000 written
+  …59250 written
+  …59500 written
+  …59750 written
+  …60000 written
+  …60250 written
+  …60500 written
+  …60750 written
+  …61000 written
+  …61250 written
+  …61500 written
+  …61750 written
+  …62000 written
+  …62250 written
+  …62500 written
+  …62750 written
+  …63000 written
+  …63250 written
+  …63500 written
+  …63750 written
+  …64000 written
+  …64250 written
+  …64500 written
+  …64750 written
+  …65000 written
+  …65250 written
+  …65500 written
+  …65750 written
+  …66000 written
+  …66250 written
+  …66500 written
+  …66750 written
+  …67000 written
+  …67250 written
+  …67500 written
+  …67750 written
+  …68000 written
+  …68250 written
+  …68500 written
+  …68750 written
+  …69000 written
+  …69250 written
+  …69500 written
+  …69750 written
+  …70000 written
+  …70250 written
+  …70500 written
+  …70750 written
+  …71000 written
+  …71250 written
+  …71500 written
+  …71750 written
+  …72000 written
+  …72250 written
+  …72500 written
+  …72750 written
+  …73000 written
+  …73250 written
+  …73500 written
+  …73750 written
+  …74000 written
+  …74250 written
+  …74500 written
+  …74750 written
+  …75000 written
+  …75250 written
+  …75500 written
+  …75750 written
+  …76000 written
+  …76250 written
+  …76500 written
+  …76750 written
+  …77000 written
+  …77250 written
+  …77500 written
+  …77750 written
+  …78000 written
+  …78250 written
+  …78500 written
+  …78750 written
+  …79000 written
+  …79250 written
+  …79500 written
+  …79750 written
+  …80000 written
+  …80250 written
+  …80500 written
+  …80750 written
+  …81000 written
+  …81250 written
+  …81500 written
+  …81750 written
+  …82000 written
+  …82250 written
+  …82500 written
+  …82750 written
+  …83000 written
+  …83250 written
+  …83500 written
+  …83750 written
+  …84000 written
+  …84250 written
+  …84500 written
+  …84750 written
+  …85000 written
+  …85250 written
+  …85500 written
+  …85750 written
+  …86000 written
+  …86250 written
+  …86500 written
+  …86750 written
+  …87000 written
+  …87250 written
+  …87500 written
+  …87750 written
+  …88000 written
+  …88250 written
+  …88500 written
+  …88750 written
+  …89000 written
+  …89250 written
+  …89500 written
+  …89750 written
+  …90000 written
+  …90250 written
+  …90500 written
+  …90750 written
+  …91000 written
+  …91250 written
+  …91500 written
+  …91750 written
+  …92000 written
+  …92250 written
+  …92500 written
+  …92750 written
+  …93000 written
+  …93250 written
+  …93500 written
+  …93750 written
+  …94000 written
+  …94250 written
+
+Done. Wrote 94477 landmark files to data/landmarks
