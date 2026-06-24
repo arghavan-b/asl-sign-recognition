@@ -109,8 +109,18 @@ def main() -> None:
                     help="Optional gloss list to filter to (else all 250 signs)")
     ap.add_argument("--out", type=Path, default=Path("data/landmarks"))
     ap.add_argument("--max-per-sign", type=int, default=0, help="0 = no cap")
+    ap.add_argument("--no-face", action="store_true",
+                    help="Write hands+pose only (225-d) — ~7x smaller on disk. "
+                         "Use when training with landmarks.use_face=false (e.g. on "
+                         "Kaggle's 20GB working limit).")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
+
+    # Columns to drop when --no-face (face block, in value units).
+    face_cols = np.s_[TYPE_BASE["face"] * 3: TYPE_BASE["left_hand"] * 3]
+    out_dim = FEATURE_DIM - (TYPE_BASE["left_hand"] - TYPE_BASE["face"]) * 3
+    if args.no_face:
+        print(f"--no-face: writing {out_dim}-d (pose+hands) arrays")
 
     rows = read_index(args.data_dir)
     all_signs = sorted({r["sign"] for r in rows})
@@ -155,6 +165,8 @@ def main() -> None:
         arr = parquet_to_array(args.data_dir / r["path"])
         if arr.shape[0] == 0:
             continue
+        if args.no_face:
+            arr = np.delete(arr, face_cols, axis=1)  # -> (T, 225) pose+hands
         dest.parent.mkdir(parents=True, exist_ok=True)
         np.save(dest, arr)
         written += 1
