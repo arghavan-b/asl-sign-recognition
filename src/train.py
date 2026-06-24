@@ -12,6 +12,7 @@ split is created from config fractions (a weaker signal; see README).
 from __future__ import annotations
 
 import argparse
+import platform
 from pathlib import Path
 
 import numpy as np
@@ -137,18 +138,25 @@ def main() -> None:
     log.info("Augmentation: %s (train only)", "on" if aug_on else "off")
 
     tcfg = cfg["train"]
-    # With an in-RAM cache, serve from the main process: macOS spawns workers
-    # that wouldn't share the preloaded cache (and would re-load it per worker).
-    workers = 0 if cache_ram else tcfg["num_workers"]
-    if cache_ram and tcfg["num_workers"]:
-        log.info("num_workers forced to 0 (serving from RAM cache)")
+    # On Linux, DataLoader workers are FORKED and share the preloaded RAM cache
+    # via copy-on-write — so caching + parallel workers is the fast combo (workers
+    # do augmentation in parallel, feeding the GPU). Only spawn-based platforms
+    # (macOS/Windows) would re-load the cache per worker, so force 0 there.
+    workers = tcfg["num_workers"]
+    if cache_ram and platform.system() != "Linux":
+        workers = 0
+        log.info("num_workers forced to 0 (RAM cache on non-fork platform)")
+    pin = device == "cuda"
+    persist = workers > 0
+    loader_kw = dict(collate_fn=collate, num_workers=workers, pin_memory=pin,
+                     persistent_workers=persist)
+    log.info("DataLoader: num_workers=%d, pin_memory=%s", workers, pin)
     train_loader = DataLoader(
         train_ds, batch_size=tcfg["batch_size"], shuffle=True,
-        collate_fn=collate, num_workers=workers, drop_last=False,
+        drop_last=False, **loader_kw,
     )
     val_loader = DataLoader(
-        val_ds, batch_size=tcfg["batch_size"], shuffle=False,
-        collate_fn=collate, num_workers=workers,
+        val_ds, batch_size=tcfg["batch_size"], shuffle=False, **loader_kw,
     )
 
     # Clean-train probe: a fixed sample of TRAIN clips with augmentation OFF, so
@@ -161,8 +169,7 @@ def main() -> None:
         probe_idx = list(rng.choice(np.asarray(probe_idx), size=2000, replace=False))
     probe_ds = full.subset(probe_idx, augment=False)
     probe_loader = DataLoader(
-        probe_ds, batch_size=tcfg["batch_size"], shuffle=False,
-        collate_fn=collate, num_workers=workers,
+        probe_ds, batch_size=tcfg["batch_size"], shuffle=False, **loader_kw,
     )
 
     model = build_model(cfg, spec.feature_dim, full.num_classes).to(device)
